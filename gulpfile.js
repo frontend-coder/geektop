@@ -53,6 +53,7 @@ gulp.task('scripts', done => {
 	var jsFiles = [
 	'app/libs/plagins/jquery/jquery.min.js',
 	'app/libs/plagins/likely/likely.js',
+		'app/libs/plagins/prognroll/prognroll.js',
 'app/libs/common.js'
 // Always at the end
 ];

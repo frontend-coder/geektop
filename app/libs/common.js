@@ -1,8 +1,16 @@
 $(document).ready(function () {
 
+$("body").prognroll({
+	height: 2,
+	color: "#ec1c1c",
+	custom: false
+});
+
+
+
 $('.logo-litera').each(function(){
 let ths = $(this);
-ths.html(ths.html().replace('O', '<span>O</span>') );
+ths.html(ths.html().replace('E', '<span>E</span>') );
 });
 
 $('.search').click(function(){
