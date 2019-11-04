@@ -13,7 +13,7 @@ const plumber           = require('gulp-plumber');
 const filesize          = require('gulp-filesize');
 const notify                = require('gulp-notify');
 const gulpUtil          = require('gulp-util');
-
+const pipeline = require('readable-stream').pipeline;
 // npm i --save-dev browser-sync
 const browserSync           = require('browser-sync').create();
 
@@ -24,7 +24,13 @@ const del               = require('del');
 const ftp               = require('gulp-ftp');
 const vinyFTP           = require( 'vinyl-ftp' );
 
-
+gulp.task('compress', function () {
+  return pipeline(
+        gulp.src('app/js/*.js'),
+        uglify(),
+        gulp.dest('dist')
+  );
+});
 gulp.task('styles', () => {
 	var sassFiles = [
 	'app/scss/libs.scss',
@@ -42,7 +48,7 @@ gulp.task('styles', () => {
 	.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade:true}))
 	.pipe(concat('libs.css'))
 	.pipe(rename('libs.min.css'))
-//.pipe(cleancss( {level: { 2: { specialComments: 0 } } })) // Opt., comment out when debugging
+.pipe(cleancss( {level: { 2: { specialComments: 0 } } })) // Opt., comment out when debugging
 .pipe(filesize()).on('error', gulpUtil.log)
 .pipe(sourcemaps.write(''))
 .pipe(notify("Create file: <%= file.relative %>!"))
@@ -59,7 +65,7 @@ gulp.task('scripts', done => {
 ];
 return gulp.src(jsFiles)
 .pipe(concat('scripts.min.js'))
-//	.pipe(uglify()) // Mifify js (opt.)
+//.pipe(uglify()) // Mifify js (opt.)
 .pipe(notify("Create file: <%= file.relative %>!"))
 .pipe(gulp.dest('app/js'))
 .pipe(filesize()).on('error', gulpUtil.log);

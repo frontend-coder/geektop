@@ -1,12 +1,18 @@
 $(document).ready(function () {
-
 $("body").prognroll({
 	height: 2,
 	color: "#ec1c1c",
 	custom: false
 });
 
-
+$('.main-menu ul li').removeClass('active');
+var path = window.location.pathname;
+$('.main-menu ul li a').each(function() {
+	var href = $(this).attr('href');
+	if(path.slice(1).substring(0, href.length) === href) {
+		$(this).parent('li').addClass('active');
+	}
+});
 
 $('.logo-litera').each(function(){
 let ths = $(this);
@@ -42,8 +48,4 @@ $('.col-item').hover(function(){
 }, function(){
 	lnk.removeClass('hover');
 });
-
-
-
-
 });
