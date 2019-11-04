@@ -20,20 +20,172 @@
 // 1112
 @media screen and (max-width: 1080px) {
 /* делать это разрешение */
+.pattern .item-title .item-title-content h3 {
+  font-size: 15px;
+}
+.item-news-content h3 {
+  font-size: 15px;
+}
+.item-news-content {
+  min-height: 117px;
+}
+
+
+
+
+
 }
 /* первое разрешение под казачика */
 @media only screen and (max-width: 1024px) {
 /* делать это разрешение */
+.dark-section h2 {
+  margin-left: 10px;
+}
+.pattern .item-title .item-title-content {
+  padding: 40px 20px;
+
+}
+
 
 }
 
 
 @media only screen and (max-width: 992px) {
+  section h2 {
+    font-size: 26px;
+  }
+  .type-one-first h3 {
+    font-size: 20px;
+  }
+  nav.soc ul li a {
+    width: 46px;
+    height: 46px;
+    line-height: 44px;
+    font-size: 20px;
+  }
+  .main-menu li a {
+    font-size: 14px;
+  }
+
+
 
 }
 
 
 @media only screen and (max-width: 834px) {
+
+  .main-menu {
+    display: none;
+    padding: 20px;
+  }
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .mobile-menu .top-menu{
+    display: block;
+  }
+
+
+  .first-section .col-md-4 {
+    width: 50%;
+  }
+  .first-section .col-md-4:last-child {
+    width: 100%;
+  }
+  .news-wrap .col-md-6 {
+    width: 100%;
+    float: none;
+  }
+  .news-wrap .col-md-6:nth-child(2n+1) {
+    margin-right: 0;
+  }
+  .second-section .col-md-4 .aside-box {
+    width: 49%;
+  }
+// .fourth-section .col-md-6{
+// width: 100%;
+//   float: none;
+// }
+.type-one .col-md-7 {
+  width: 100%;
+  float: none;
+}
+.type-one .col-md-5 {
+  width: 100%;
+  float: none;
+}
+.second-section .col-md-8 {
+  width: 100%;
+  float: none;
+}
+.second-section .col-md-4:last-child {
+  width: 100%;
+  float: none;
+}
+.news-wrap .col-md-6 {
+  width: 49%;
+  float:left;
+}
+.dark-section .col-md-3 {
+  width: 49%;
+  padding: 0;
+}
+.dark-section .col-md-3:nth-child(2n+1),
+.news-wrap .col-md-6:nth-child(2n+1) {
+  margin-right: 2%;
+}
+.dark-section .col-md-3:nth-child(2n+2),
+.news-wrap .col-md-6:nth-child(2n+2) {
+  margin-right: 0;
+}
+
+.second-section .col-md-4:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fourth-section .aside-box {
+  width: 100%;
+  margin-bottom: 0;
+  padding-right: 0;
+}
+.fourth-section .col-md-4,
+.fourth-section .col-md-8 {
+  width: 100%;
+  float:none;
+}
+.aside-box_sm {
+  display: block;
+  margin-top: 10px;
+}
+.aside-box_lg {
+  display: none;
+}
+.type-one {
+  padding-top: 0;
+}
+.type-one .col-md-5 {
+  display: flex;
+  justify-content: space-between;
+}
+.type-one .col-md-5 .pattern {
+  width: 49%;
+}
+.second-section .col-md-8 {
+  padding-right: 0;
+}
+.col-md-8 {
+  padding-right: 0;
+}
+
+.type-one-first {
+  margin-right: 0;
+}
+
+
+
+
 
 
 }
@@ -44,7 +196,9 @@
 }
 
 @media only screen and (max-width: 800px) {
-
+  .type-one-first h3 {
+    font-size: 18px;
+  }
 
 }
 
@@ -80,6 +234,30 @@
 }
 
 @media only screen and (max-width: 736px) {
+  .col-md-6,
+  .dark-section .col-md-3,
+  .news-wrap .col-md-6,
+  .first-section .col-md-6,
+  .first-section .col-md-4 {
+    width: 100%;
+    float: none;
+  }
+  .dark-section .col-md-3:nth-child(2n+1), .news-wrap .col-md-6:nth-child(2n+1) {
+    margin-right: 0;
+  }
+  .col-md-8 {
+    padding-right: 0;
+  }
+  .type-one .col-md-5 {
+    flex-wrap: wrap;
+  }
+  .type-one .col-md-5 .pattern {
+    width: 100%;
+  }
+
+
+
+
 
 
 
@@ -124,12 +302,31 @@
 
 @media only screen and (max-width: 480px) {
 /* делать это разрешение */
+.logo {
+  font-size: 20px;
+}
+nav.soc ul li a {
+  width: 42px;
+  height: 42px;
+  line-height: 40px;
+  font-size: 16px;
+}
+.second-section .col-md-4:last-child {
+  flex-wrap: wrap;
+}
+.second-section .col-md-4 .aside-box {
+  width: 100%;
+}
+
+
 
 
 }
 
 @media only screen and (max-width: 425px) {
-
+  .bottom-footer p {
+    font-size: 11px;
+  }
 
 
 }
@@ -153,7 +350,25 @@
 }
 
 @media only screen and (max-width: 375px) {
+  .container-fluid {
+    padding: 0 12px;
+  }
 
+  .mobile-menu-button {
+    margin-left: 75px;
+  }
+  .top-line {
+    height: 60px;
+  }
+  .logo {
+    padding-left: 25px;
+  }
+  .type-one-first h3 {
+    font-size: 16px;
+  }
+  .search-wrap .search-field {
+    top: 60px;
+  }
 
 
 }

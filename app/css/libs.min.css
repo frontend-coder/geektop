@@ -406,14 +406,16 @@ body {
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2") format("woff2"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: auto;
 }
 
 .fa {
@@ -425,26 +427,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.fa-linode:before {
-  content: "\f2b8";
+.fa-comments:before {
+  content: "\f086";
 }
 
-.fa-thermometer-1:before,
-.fa-thermometer-quarter:before {
-  content: "\f2ca";
+.fa-share-alt:before {
+  content: "\f1e0";
 }
 
 .fa-vk:before {
   content: "\f189";
 }
 
-.fa-facebook-f:before,
-.fa-facebook:before {
-  content: "\f09a";
+.fa-twitter-square:before {
+  content: "\f081";
+}
+
+.fa-facebook-square:before {
+  content: "\f082";
 }
 
 .fa-odnoklassniki:before {
   content: "\f263";
+}
+
+.fa-odnoklassniki-square:before {
+  content: "\f264";
 }
 
 .fa-instagram:before {
@@ -456,26 +464,23 @@ body {
   content: "\f09e";
 }
 
-.fa-comments:before {
-  content: "\f086";
-}
-
 .fa-search:before {
   content: "\f002";
-}
-
-.fa-angle-double-left:before {
-  content: "\f100";
-}
-
-.fa-angle-double-right:before {
-  content: "\f101";
 }
 
 .fa-navicon:before,
 .fa-reorder:before,
 .fa-bars:before {
   content: "\f0c9";
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+
+.fa-facebook-f:before,
+.fa-facebook:before {
+  content: "\f09a";
 }
 
 @charset "UTF-8";
@@ -865,6 +870,7 @@ section h2 {
 .item-comments .item-comments-count {
   font-size: 12px;
   color: #fff;
+  font-weight: bold;
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -875,6 +881,11 @@ section h2 {
 
 .item-comments .item-comments-count:hover {
   text-decoration: underline;
+}
+
+.lb-footer .item-comments .item-comments-count {
+  font-size: 12px;
+  color: #ec1c1c;
 }
 
 .likely-custom {
@@ -918,6 +929,7 @@ section h2 {
 .col-md-8 {
   width: 66.66667%;
   float: left;
+  padding-right: 10px;
 }
 
 .second-section {
@@ -1315,6 +1327,14 @@ nav.soc ul li a:hover .fa {
   padding: 0 5px;
 }
 
+.aside-box_sm {
+  display: none;
+}
+
+.aside-box_lg {
+  display: block;
+}
+
 .cat-header {
   background-size: cover;
   background-position: center bottom;
@@ -1565,8 +1585,7 @@ a.cat-list-item p {
   padding-top: 12px;
 }
 
-.pagination span,
-.pagination a {
+.pagination span, .pagination a {
   display: inline-block;
   margin-top: 5px;
   width: 42px;
@@ -2405,11 +2424,163 @@ a.cat-list-item p {
 /*==========  Desktop First  ==========*/
 @media screen and (max-width: 1080px) {
   /* делать это разрешение */
+  .pattern .item-title .item-title-content h3 {
+    font-size: 15px;
+  }
+  .item-news-content h3 {
+    font-size: 15px;
+  }
+  .item-news-content {
+    min-height: 117px;
+  }
 }
 
 /* первое разрешение под казачика */
 @media only screen and (max-width: 1024px) {
   /* делать это разрешение */
+  .dark-section h2 {
+    margin-left: 10px;
+  }
+  .pattern .item-title .item-title-content {
+    padding: 40px 20px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  section h2 {
+    font-size: 26px;
+  }
+  .type-one-first h3 {
+    font-size: 20px;
+  }
+  nav.soc ul li a {
+    width: 46px;
+    height: 46px;
+    line-height: 44px;
+    font-size: 20px;
+  }
+  .main-menu li a {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 834px) {
+  .main-menu {
+    display: none;
+    padding: 20px;
+  }
+  .mobile-menu-button {
+    display: block;
+  }
+  .mobile-menu .top-menu {
+    display: block;
+  }
+  .first-section .col-md-4 {
+    width: 50%;
+  }
+  .first-section .col-md-4:last-child {
+    width: 100%;
+  }
+  .news-wrap .col-md-6 {
+    width: 100%;
+    float: none;
+  }
+  .news-wrap .col-md-6:nth-child(2n+1) {
+    margin-right: 0;
+  }
+  .second-section .col-md-4 .aside-box {
+    width: 49%;
+  }
+  .type-one .col-md-7 {
+    width: 100%;
+    float: none;
+  }
+  .type-one .col-md-5 {
+    width: 100%;
+    float: none;
+  }
+  .second-section .col-md-8 {
+    width: 100%;
+    float: none;
+  }
+  .second-section .col-md-4:last-child {
+    width: 100%;
+    float: none;
+  }
+  .news-wrap .col-md-6 {
+    width: 49%;
+    float: left;
+  }
+  .dark-section .col-md-3 {
+    width: 49%;
+    padding: 0;
+  }
+  .dark-section .col-md-3:nth-child(2n+1),
+  .news-wrap .col-md-6:nth-child(2n+1) {
+    margin-right: 2%;
+  }
+  .dark-section .col-md-3:nth-child(2n+2),
+  .news-wrap .col-md-6:nth-child(2n+2) {
+    margin-right: 0;
+  }
+  .second-section .col-md-4:last-child {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .fourth-section .aside-box {
+    width: 100%;
+    margin-bottom: 0;
+    padding-right: 0;
+  }
+  .fourth-section .col-md-4,
+  .fourth-section .col-md-8 {
+    width: 100%;
+    float: none;
+  }
+  .aside-box_sm {
+    display: block;
+    margin-top: 10px;
+  }
+  .aside-box_lg {
+    display: none;
+  }
+  .type-one {
+    padding-top: 0;
+  }
+  .type-one .col-md-5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .type-one .col-md-5 .pattern {
+    width: 49%;
+  }
+  .second-section .col-md-8 {
+    padding-right: 0;
+  }
+  .col-md-8 {
+    padding-right: 0;
+  }
+  .type-one-first {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .type-one-first h3 {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -2426,12 +2597,81 @@ a.cat-list-item p {
 }
 
 /* end  (max-width: 768px) */
+@media only screen and (max-width: 736px) {
+  .col-md-6,
+  .dark-section .col-md-3,
+  .news-wrap .col-md-6,
+  .first-section .col-md-6,
+  .first-section .col-md-4 {
+    width: 100%;
+    float: none;
+  }
+  .dark-section .col-md-3:nth-child(2n+1), .news-wrap .col-md-6:nth-child(2n+1) {
+    margin-right: 0;
+  }
+  .col-md-8 {
+    padding-right: 0;
+  }
+  .type-one .col-md-5 {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .type-one .col-md-5 .pattern {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   /* делать это разрешение */
 }
 
 @media only screen and (max-width: 480px) {
   /* делать это разрешение */
+  .logo {
+    font-size: 20px;
+  }
+  nav.soc ul li a {
+    width: 42px;
+    height: 42px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+  .second-section .col-md-4:last-child {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .second-section .col-md-4 .aside-box {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .bottom-footer p {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .container-fluid {
+    padding: 0 12px;
+  }
+  .mobile-menu-button {
+    margin-left: 75px;
+  }
+  .top-line {
+    height: 60px;
+  }
+  .logo {
+    padding-left: 25px;
+  }
+  .type-one-first h3 {
+    font-size: 16px;
+  }
+  .search-wrap .search-field {
+    top: 60px;
+  }
 }
 
 /*==========  Mobile First  ==========*/
